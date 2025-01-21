@@ -31,7 +31,7 @@ const HomePage = () => {
   }, []); // Empty dependency array ensures this runs once on mount
 
   return (
-    <div className="homePageContainer">
+    <div className="homePage">
       <div className="homePageHeader">
         <h2>Welcome to the HomePage - {username}</h2>
         {isLoggedIn && (
