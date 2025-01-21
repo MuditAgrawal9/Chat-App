@@ -1,50 +1,73 @@
-  .homePageHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 800px;
-    margin-bottom: 30px;
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
+.homePage {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.homePageHeader {
+  background-color: #998d8d;
+  color: #ffffff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ddd;
+}
+
+.homePageHeader h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.logoutButton {
+  background-color: #ff5252;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.logoutButton:hover {
+  background-color: #ff1744;
+}
+
+.homePageContent {
+  padding: 2rem;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .homePageHeader h2 {
-    font-size: 1.5rem;
-    color: #333;
+    font-size: 1.25rem;
   }
-  
-  .homePageHeader .logoutButton {
-    padding: 10px 15px;
-    font-size: 1rem;
-    background-color: #ff4c4c;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+
+  .logoutButton {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
   }
-  
-  .homePageHeader .logoutButton:hover {
-    background-color: #ff1a1a;
+}
+
+@media (max-width: 480px) {
+  .homePageHeader h2 {
+    font-size: 0.75rem;
   }
-  
-  /* responsiveness */
-  @media (max-width: 768px) {
-    .homePageHeader {
-      flex-direction: column;
-      align-items: flex-start;
-      text-align: left;
-    }
-  
-    .homePageHeader h2 {
-      margin-bottom: 10px;
-    }
-  
-    .homePageHeader .logoutButton {
-      margin-top: 10px;
-    }
+
+  .logoutButton {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
   }
-  
+}

@@ -86,7 +86,7 @@ const Chat = ({ username }) => {
       <div className="sidebar">
         <h2>Sessions</h2>
         <button onClick={createNewSession} className="newSessionButton">
-          New Session
+          Create New Session
         </button>
         <div className="sessionsList">
           {Object.keys(sessions).map((session) => (
@@ -97,21 +97,28 @@ const Chat = ({ username }) => {
               >
                 {session}
               </button>
-              <button
+              {/* <button
                 onClick={() => deleteSession(session)}
                 className="deleteSessionButton"
               >
                 Delete
-              </button>
+              </button> */}
             </div>
           ))}
         </div>
       </div>
 
       <div className="chatArea">
-        {currentSession && (
+        {currentSession ? (
           <>
-            <h2>{currentSession}</h2>
+            <div className="chat-header">
+              <div className="session-title">
+                {currentSession}
+                <button onClick={() => deleteSession(currentSession)} className="deleteSessionButton">
+                  Delete Session
+                </button>
+              </div>
+            </div>
             <div className="chatBox">
               {sessions[currentSession].map((msg, index) => (
                 <div
@@ -137,6 +144,12 @@ const Chat = ({ username }) => {
                 Send
               </button>
             </form>
+          </>
+        ) : (
+          <>
+            <div className="noSessionMessage">
+              Select or create a session to start chatting.
+            </div>
           </>
         )}
       </div>
