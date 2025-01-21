@@ -1,0 +1,126 @@
+.chat-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.newSessionButton {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.newSessionButton:hover {
+  background-color: #45a049;
+}
+
+.sessionsList {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.sessionItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.sessionButton {
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sessionButton:hover {
+  background-color: #f1f1f1;
+}
+
+.deleteSessionButton {
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.deleteSessionButton:hover {
+  background-color: #e60000;
+}
+
+.chatArea {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatBox {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.sentMessage,
+.receivedMessage {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.sentMessage {
+  background-color: #dcf8c6;
+  align-self: flex-end;
+}
+
+.receivedMessage {
+  background-color: #f1f1f1;
+}
+
+.inputContainer {
+  display: flex;
+}
+
+.input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.sendButton {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.sendButton:hover {
+  background-color: #45a049;
+}
