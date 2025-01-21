@@ -20,11 +20,12 @@
 
 .newSessionButton {
   padding: 10px;
-  background-color: #4CAF50;
+  background-color: #998d8d;
   color: white;
   border: none;
   cursor: pointer;
   margin-bottom: 20px;
+  border-radius: 4px;
 }
 
 .newSessionButton:hover {
@@ -41,17 +42,20 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  margin-bottom: 10px;
 }
 
 .sessionButton {
-  width: 100%;
-  padding: 10px;
-  text-align: left;
-  background-color: #fff;
+  flex-grow: 1;
+  background-color: #f9f9f9;
+  color: #333333;
   border: 1px solid #ddd;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
   cursor: pointer;
-  border-radius: 5px;
+  font-size: 1rem;
+  text-align: left;
+  margin-right: 0.5rem;
+  transition: background 0.3s ease;
 }
 
 .sessionButton:hover {
@@ -59,12 +63,14 @@
 }
 
 .deleteSessionButton {
-  background-color: red;
-  color: white;
+  background-color: #ff4d4f;
+  color: #ffffff;
   border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
   cursor: pointer;
-  padding: 5px 10px;
-  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
 }
 
 .deleteSessionButton:hover {
@@ -79,9 +85,12 @@
 }
 
 .chatBox {
-  flex-grow: 1;
+  flex-grow: 0.5;
   overflow-y: auto;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .sentMessage,
@@ -93,11 +102,12 @@
 
 .sentMessage {
   background-color: #dcf8c6;
-  align-self: flex-end;
+  align-self: flex-start;
 }
 
 .receivedMessage {
   background-color: #f1f1f1;
+  align-self: flex-end;
 }
 
 .inputContainer {
@@ -123,4 +133,253 @@
 
 .sendButton:hover {
   background-color: #45a049;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #afa4a4;
+  padding: 0.75rem;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 0.5rem;
+}
+
+.session-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .chat-container {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    width: 250px;
+    border-right: 1px solid #ddd;
+    height: 100%;
+    padding: 15px;
+  }
+
+  .chatArea {
+    width: calc(100% - 250px);
+    padding: 20px;
+  }
+
+  .sessionButton {
+    font-size: 1rem;
+  }
+
+  .deleteSessionButton {
+    font-size: 1rem;
+  }
+
+  .newSessionButton {
+    font-size: 1rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .chat-container {
+    flex-direction: row; /* Keep sidebar on the left and chat on the right even on small screens */
+    font-size: 0.7rem;
+  }
+
+  .sidebar {
+    width: 150px;
+    padding: 8px;
+    border-right: 1px solid #ddd;
+    /* font-size: 0.7rem; */
+  }
+
+  .chatArea {
+    width: calc(100% - 250px);
+    padding: 8px;
+  }
+
+  .sessionButton {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+  }
+
+  .deleteSessionButton {
+    font-size: 0.7rem;
+    padding: 0.4rem;
+  }
+
+  .chat-header {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .newSessionButton {
+    padding: 6px;
+    font-size: 0.8rem;
+  }
+
+  .input {
+    padding: 6px;
+  }
+
+  .sendButton {
+    padding: 6px 10px;
+  }
+
+  .session-title{
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chat-container {
+    flex-direction: column; /* Sidebar above chat */
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .chatArea {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .sessionButton {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+  }
+
+  .deleteSessionButton {
+    font-size: 0.7rem;
+    padding: 0.4rem;
+  }
+
+  .chat-header {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .newSessionButton {
+    padding: 6px;
+    font-size: 0.8rem;
+  }
+
+  .input {
+    padding: 6px;
+  }
+
+  .sendButton {
+    padding: 6px 10px;
+  }
+
+  .session-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .chat-container {
+    flex-direction: column; 
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .chatArea {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .sessionButton {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+  }
+
+  .deleteSessionButton {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+  }
+
+  .chat-header {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .newSessionButton {
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+
+  .input {
+    padding: 6px;
+  }
+
+  .sendButton {
+    padding: 6px 10px;
+  }
+
+  .session-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .chat-container {
+    flex-direction: column; 
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 6px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .chatArea {
+    width: 100%;
+    padding: 6px;
+  }
+
+  .sessionButton {
+    font-size: 0.7rem;
+    padding: 0.3rem;
+  }
+
+  .deleteSessionButton {
+    font-size: 0.7rem;
+    padding: 0.3rem;
+  }
+
+  .chat-header {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .newSessionButton {
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+
+  .input {
+    padding: 5px;
+  }
+
+  .sendButton {
+    padding: 5px 8px;
+  }
+
+  .session-title {
+    font-size: 0.9rem;
+  }
 }
