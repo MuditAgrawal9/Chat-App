@@ -1,0 +1,50 @@
+  .homePageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .homePageHeader h2 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .homePageHeader .logoutButton {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .homePageHeader .logoutButton:hover {
+    background-color: #ff1a1a;
+  }
+  
+  /* responsiveness */
+  @media (max-width: 768px) {
+    .homePageHeader {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+  
+    .homePageHeader h2 {
+      margin-bottom: 10px;
+    }
+  
+    .homePageHeader .logoutButton {
+      margin-top: 10px;
+    }
+  }
+  
