@@ -37,6 +37,13 @@ const Register = () => {
         setError("Already a User");
         return;
       }
+      if (
+        data.error &&
+        data.error.message === "email must be a valid email"
+      ) {
+        setError("Enter a valid email");
+        return;
+      }
       if (response.ok) {
         localStorage.setItem("jwt", data.jwt); 
         localStorage.setItem("user", JSON.stringify(data.user));
