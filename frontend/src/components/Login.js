@@ -2,7 +2,8 @@ import { useState } from "react";
 import "./Login.css"; 
 import { Link, useNavigate } from "react-router-dom";
 
-const API_URL = "http://localhost:1337";
+// const API_URL = "http://localhost:1337";
+const API_URL = "https://chat-app-backend-hm10.onrender.com";
 
 const Login = () => {
   const [email, setEmail] = useState("");
