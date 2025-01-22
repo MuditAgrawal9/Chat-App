@@ -14,7 +14,8 @@ const Register = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:1337/api/auth/local/register",
+        // "http://localhost:1337/api/auth/local/register",
+        "https://chat-app-backend-hm10.onrender.com/api/auth/local/register",
         {
           method: "POST",
           headers: {
