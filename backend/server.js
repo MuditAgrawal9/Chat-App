@@ -9,7 +9,8 @@ const server = http.createServer(app);
 app.use(cors());
 const io = socketIo(server, {
   cors: {
-    origin: "http://localhost:3000",  //frontend port
+    // origin: "http://localhost:3000",  //frontend port
+    origin: "https://chat-app-a183.onrender.com",  //frontend port
     methods: ["GET", "POST"],
   },
 });
